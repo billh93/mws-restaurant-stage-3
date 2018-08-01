@@ -29,7 +29,7 @@ In order to run this program you will need the following:
 4. 3. To run the app without problems, please disable warnings for self signed certificate in Chrome:
 `chrome://flags/#allow-insecure-localhost` and select **Enabled**
 5. Run `gulp run` to start the app
-6. 5. If you aren't able to run the program use root access `sudo gulp run` instead.
+6. If you aren't able to run the program use root access `sudo gulp run` instead.
 7. Visit https://localhost:443 to view the program.
 
 ## Contact Information
