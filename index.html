@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#252831">
+  <meta name="description" content="This is the Restaurant Reviews app for Mobile Web Specialist Nanodegree from Udacity">
+  <link rel="preconnect" href="http://localhost:1337">
+  <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+	<link rel="stylesheet" href="css/combined.css">
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent" class="flex-container" role="main">
+    <section id="map-container" class="col-12 col-lg-6 col-xl-7 order-lg-2">
+      <div id="map" role="application" aria-label="Map with restaurants"></div>
+    </section>
+    <section class="col-12 col-lg-6 col-xl-5 order-lg-1 restaurants-section">
+      <div class="filter-options" role="search" aria-label="Search for restaurants">
+        <h2>Filter Results</h2>
+        <select id="neighborhoods-select" aria-label="Neighborhoods" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+        <select id="cuisines-select" aria-label="Types of cuisines" name="cuisines" onchange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <div id="restaurants-list"></div>
+    </section>
+  </main>
+
+  <footer id="footer" class="col-lg-6 col-xl-5">
+    Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+  <!-- Register SW -->
+  <!-- build:js js/combined.js -->
+  <script type="text/javascript" charset="utf-8" src="src/js/register_sw.js"></script>
+  <script type="text/javascript" charset="utf-8" src="src/js/dbhelper.js"></script>
+  <!-- endbuild -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.5.2/lazyload.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtKpX9NRaweEsaCmPJigd_FgBIPcVrY3U&libraries=places&callback=initMap"></script>
+</body>
+
+</html>
